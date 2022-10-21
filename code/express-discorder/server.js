@@ -19,7 +19,7 @@ app.get("/", (req, res) => res.send(`
 
 app.post("/github", (req, res) => {
   const content = ":tada: Deployment Successful!";
-  const avatarUrl = "https://media.giphy.com/media/3o7TKSjRrfIPjeiVyM/giphy.gif";
+  const avatarUrl = "https://avatars.githubusercontent.com/u/54039021?v=4";
   axios
     .post(process.env.DISCORD_WEBHOOK_URL, {
       content: content,
