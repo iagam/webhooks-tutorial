@@ -18,7 +18,7 @@ app.get("/", (req, res) => res.send(`
 `));
 
 app.post("/github", (req, res) => {
-  const content = ":tada: Deployment Successful!";
+  const content = ":tada: Successfully Deployed! :tada:";
   const avatarUrl = req.body.sender.avatar_url;
   axios
     .post(process.env.DISCORD_WEBHOOK_URL, {
