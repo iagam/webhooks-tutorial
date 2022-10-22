@@ -18,7 +18,8 @@ app.get("/", (req, res) => res.send(`
 `));
 
 app.post("/github", (req, res) => {
-  const content = ":tada: Successfully Deployed! :tada:";
+  //TODO: Change the content variable to contain the repo name and the github username and emoji flair..
+  const content = 'Changes in ' + req.body.repository.name + ' by ' + req.body.sender.login + " :rocket: :rocket: :tada:";
   const avatarUrl = req.body.sender.avatar_url;
   axios
     .post(process.env.DISCORD_WEBHOOK_URL, {
